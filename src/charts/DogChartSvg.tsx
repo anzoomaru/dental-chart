@@ -627,7 +627,6 @@ export default function DogChartSvg({ state, mode, onToothClick }: Props) {
             </text>
           ))}
         </g>
-      </g>
     </svg>
   );
 }
