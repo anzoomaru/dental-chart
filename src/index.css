@@ -1,0 +1,210 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  color: #111;
+  background: #f6f6f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.home {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.homeCard {
+  width: min(520px, 100%);
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.homeTitle {
+  margin: 0 0 8px;
+}
+
+.homeDesc {
+  margin: 0 0 14px;
+  color: #444;
+}
+
+.homeBtns {
+  display: flex;
+  gap: 10px;
+}
+
+.appWrap {
+  padding: 16px;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto 12px;
+  width: min(980px, 100%);
+}
+
+.topBarTitle {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.topBarRight {
+  margin-left: auto;
+}
+
+.btn {
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.ghost {
+  background: transparent;
+}
+
+.page {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 12px;
+}
+
+.pageTitle {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.pageSub {
+  color: #666;
+  font-size: 12px;
+}
+
+.block {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.blockTitle {
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.fieldLabel {
+  font-size: 12px;
+  color: #444;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: white;
+}
+
+.textarea {
+  width: 100%;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.modeRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.chartWrap {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+/* 印刷用 */
+.printFooter {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #444;
+}
+
+/* A4印刷時の見栄え */
+@media print {
+  body {
+    background: white;
+  }
+
+  .noPrint {
+    display: none !important;
+  }
+
+  .appWrap {
+    padding: 0;
+  }
+
+  .page {
+    width: auto;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+}
+
+/* スマホ/iPadで入力しやすく */
+@media (max-width: 820px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
