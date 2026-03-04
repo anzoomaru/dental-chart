@@ -616,7 +616,7 @@ export default function DogChartSvg({ state, onToothClick }: Props) {
               x={t.x}
               y={t.y}
               textAnchor="middle"
-              fontSize={10}
+              fontSize={6}
               fill="#111"
               stroke="#fff"
               strokeWidth={3}
