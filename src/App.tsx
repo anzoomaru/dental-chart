@@ -142,17 +142,24 @@ if (!species) {
           </button>
         </div>
 
-        {/* 顎イラスト */}
-        <img
-          src={jawImg}
-          alt="jaw"
-          style={{
-            position: "absolute",
-            right: 80,
-            bottom: 70,
-            width: 520,
-          }}
-        />
+{/* 顎イラスト */}
+<img
+  src={jawImg}
+  alt="jaw"
+  style={{
+    position: "absolute",
+    right: 80,
+    bottom: 70,
+
+    // ★ここが重要：固定520pxをやめる
+    width: "min(520px, 60vw)",   // 画面が狭いときは60%幅まで縮む
+    height: "auto",
+    maxHeight: "35vh",           // iPadで縦に伸びすぎて被るのを防ぐ
+    objectFit: "contain",
+    display: "block",
+    pointerEvents: "none",       // 画像がボタンのクリックを邪魔しない保険
+  }}
+/>
       </div>
     </div>
   );
