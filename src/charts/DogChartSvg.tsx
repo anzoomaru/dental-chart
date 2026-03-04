@@ -15,7 +15,7 @@ function fillOf(st?: ToothState) {
 
 type ToothLabel = { id: string; x: number; y: number };
 
-export default function DogChartSvg({ state, mode, onToothClick }: Props) {
+export default function DogChartSvg({ state, onToothClick }: Props) {
   // stateから「色を塗るCSS」を生成（pathに個別onClick/ fillを書かない方式）
   const dynamicCss = Object.entries(state)
     .filter(([_, st]) => st.extract || st.missing)
